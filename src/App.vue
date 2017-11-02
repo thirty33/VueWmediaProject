@@ -3,14 +3,17 @@
 <template>
   <!-- <persona></persona> -->
 
-  <elemento tipo="footer">Hola Mundo</elemento>
+  <!-- <elemento tipo="footer">Hola Mundo</elemento> -->
+  <tareas></tareas>
 </template>
 
 <script>
-  import persona from './components/persona.vue'
-  import elemento from './components/elemento.vue'
+  // import persona from './components/persona.vue'
+  // import elemento from './components/elemento.vue'
+  import Tareas from './components/tareas.vue'
 export default {
-  components: { elemento },
+  components: { Tareas },
+  // components: { elemento },
   // components: { persona },
   
 }
