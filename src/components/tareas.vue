@@ -35,12 +35,12 @@
 
 
 				],
-				tarea: '',
+				
 			}
 
 
 		},
-		mothods: {
+		methods: {
 			actualizarTarea: function (tarea) {
 				tarea.complete = !tarea.complete
 			}
@@ -61,7 +61,9 @@
 </script>
 
 
-<style>
-	
+<style scoped>
+	li a {
+		color:red;
+	}
 
 </style>
