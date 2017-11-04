@@ -32,13 +32,14 @@
 		// 		this.$store.commit('reducir')
 		// 	}
 		// },
-		
-		computed: mapState(['cantidad'])
+		// Uso de mapmutations con Vuex
+		methods: mapMutations(['aumentar', 'reducir']),
+		computed: mapState(['cantidad']),
 		// {
 		// 	cantidad(){
 		// 		return this.$store.state.cantidad
 		// 	}
-		// }
+		
 
 
 
