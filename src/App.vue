@@ -31,9 +31,13 @@
   </contador>  -->
 
   <!-- Despues de vuex -->
-  <contador>
+  <!-- <contador>
               
-  </contador> 
+  </contador>  -->
+
+  <h1> Uso de mamState</h1>
+  <h1>Hola me llamo {{nombre}} {{apellidos}} y me dedico a {{profesion}} </h1>
+  
   
   </div>
 </template>
@@ -43,20 +47,34 @@
   // import elemento from './components/elemento.vue'
   import Tareas from './components/tareas.vue'
   import Contador from './components/contador.vue'
+
+  // usando mapState
+  import {mapState} from 'vuex'
   
   // components: { elemento },
   // components: { persona },
   // components: { Tareas },
 export default {
   components: { Contador },
-  data(){
-    return {
-      // cantidad: 0,
-      // subrayo: false,
+  // computed: {
+  //   nombre(){
+  //     return this.$store.state.nombre
+  //   }
+  // }
+  // computed: mapState({
+  //   nombre: (state) =>  state.nombre, 
+  //   apellidos: (state) =>  state.apellidos
+  // })
+  computed: mapState(['nombre', 'apellidos', 'profesion'])
 
-    },
+  // data(){
+  //   return {
+  //     // cantidad: 0,
+  //     // subrayo: false,
+
+  //   },
     
-  }
+  // }
   
 }
 </script>
