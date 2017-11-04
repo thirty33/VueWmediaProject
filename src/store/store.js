@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+// Separando la data de store
+
+import productos from './modules/productos'
+
 Vue.use(Vuex)
 
 
@@ -28,11 +32,11 @@ export const store = new Vuex.Store({
 
 		],
 		cantidad: 0,
-		productos: [
-			{nombre: 'jabon', precio: 50},
-			{nombre: 'jabon', precio: 50},
-			{nombre: 'jabon', precio: 50},
-		],
+		// productos: [
+		// 	{nombre: 'jabon', precio: 50},
+		// 	{nombre: 'jabon', precio: 50},
+		// 	{nombre: 'jabon', precio: 50},
+		// ],
 		carro: []
 	},
 
@@ -49,7 +53,7 @@ export const store = new Vuex.Store({
 	mutations: {
 		aumentar: (state, cantidad) => state.cantidad += cantidad,
 		reducir: (state, cantidad) => state.cantidad -= cantidad,
-		anadirProducto: (state, producto) => state.productos.unshift(producto),
+		// anadirProducto: (state, producto) => state.productos.unshift(producto),
 		comprarProducto: (state, indice) => state.carro.unshift(state.productos[indice]),
 		eliminarProducto: (state, indice) => state.carro.splice(indice,1),
 
@@ -65,6 +69,9 @@ export const store = new Vuex.Store({
 			setTimeout(() => commit('reducir', cantidad), 2000)
 		},
 
+	},
+	modules: {
+		productos,
 	}
 
 })
