@@ -5,6 +5,11 @@ import Vuex from 'vuex'
 
 import productos from './modules/productos'
 
+
+// getters
+import {getters} from './getters'
+import {mutations} from './mutations'
+
 Vue.use(Vuex)
 
 
@@ -42,22 +47,24 @@ export const store = new Vuex.Store({
 
 		
 
-	getters: {
-		tareasCompletadas: (state) => {
-			return state.tareas.filter((tarea) => tarea.completado).length
-		},
-		totalCompra: (state) => {
-			return state.carro.reduce((total, producto) => total + producto.precio,0)
-		}
-	},
-	mutations: {
-		aumentar: (state, cantidad) => state.cantidad += cantidad,
-		reducir: (state, cantidad) => state.cantidad -= cantidad,
-		// anadirProducto: (state, producto) => state.productos.unshift(producto),
-		comprarProducto: (state, indice) => state.carro.unshift(state.productos[indice]),
-		eliminarProducto: (state, indice) => state.carro.splice(indice,1),
+	getters, 
+	// {
+	// 	tareasCompletadas: (state) => {
+	// 		return state.tareas.filter((tarea) => tarea.completado).length
+	// 	},
+	// 	totalCompra: (state) => {
+	// 		return state.carro.reduce((total, producto) => total + producto.precio,0)
+	// 	}
+	// },
+	mutations,
+	// {
+	// 	aumentar: (state, cantidad) => state.cantidad += cantidad,
+	// 	reducir: (state, cantidad) => state.cantidad -= cantidad,
+	// 	// anadirProducto: (state, producto) => state.productos.unshift(producto),
+	// 	comprarProducto: (state, indice) => state.carro.unshift(state.productos[indice]),
+	// 	eliminarProducto: (state, indice) => state.carro.splice(indice,1),
 
-	},
+	// },
 	// Cambios asincronos
 	actions: {
 		// Acceso al context
