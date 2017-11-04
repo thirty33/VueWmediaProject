@@ -44,6 +44,13 @@
   <tareas></tareas>
 
 
+  <!-- Vuex mutations -->
+  <h2>Contador vuex mutations</h2>
+  <contador></contador>
+
+
+
+
 
   
   
@@ -61,9 +68,10 @@
   
   // components: { elemento },
   // components: { persona },
-  // components: { Contador },
+  // components: { Tareas },
 export default {
-  components: { Tareas },
+  components: { Contador },
+
   // computed: {
   //   nombre(){
   //     return this.$store.state.nombre

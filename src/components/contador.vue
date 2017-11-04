@@ -10,27 +10,35 @@
 
 
 <script>
+	import {mapState, mapMutations} from 'vuex'
 	export default {
-		props: ['cantidad'],
-		methods: {
-			aumentar() {
-				// this.$emit('aumentar')
+		// props: ['cantidad'],
+		// methods: {
+		// 	aumentar() {
+		// 		// this.$emit('aumentar')
 
-				// con vuex
-				this.$store.state.cantidad++
-			},
-			reducir() {
-				// this.$emit('reducir')
-				// con vuex
-				this.$store.state.cantidad--
+		// 		// con vuex
+		// 		// this.$store.state.cantidad++
 
-			}
-		},
-		computed: {
-			cantidad(){
-				return this.$store.state.cantidad
-			}
-		}
+		// 		// Con mutations
+		// 		this.$store.commit('aumentar')
+		// 	},
+		// 	reducir() {
+		// 		// this.$emit('reducir')
+		// 		// con vuex
+		// 		// this.$store.state.cantidad--
+
+		// 		//con mutations 
+		// 		this.$store.commit('reducir')
+		// 	}
+		// },
+		
+		computed: mapState(['cantidad'])
+		// {
+		// 	cantidad(){
+		// 		return this.$store.state.cantidad
+		// 	}
+		// }
 
 
 

@@ -26,12 +26,17 @@ export const store = new Vuex.Store({
 		{nombre: 'hacer la cama', completado: false},
 		{nombre: 'hacer la cama', completado: true},
 
-		]
+		],
+		cantidad: 0,
 	},
 	getters: {
 		tareasCompletadas: (state) => {
 			return state.tareas.filter((tarea) => tarea.completado).length
 		}
+	},
+	mutations: {
+		aumentar: (state) => state.cantidad++,
+		reducir: (state) => state.cantidad-- 
 	}
 
 })
