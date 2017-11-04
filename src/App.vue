@@ -40,17 +40,21 @@
   <h1>Hola me llamo {{nombre}} {{apellidos}} y me dedico a {{profesion}} </h1> -->
 
   <!-- Vuex Getters -->
-  <h1>Tareas con Vuex</h1>
-  <tareas></tareas>
+  <!-- <h1>Tareas con Vuex</h1>
+  <tareas></tareas> -->
 
 
   <!-- Vuex mutations -->
-  <h2>Contador vuex mutations</h2>
-  <contador></contador>
+  <!-- <h2>Contador vuex mutations</h2>
+  <contador></contador> -->
 
 
 
-
+  <h2>Vuex Modules</h2>
+  <h1>productos</h1>
+  <productos></productos>
+  <h1>carro</h1>
+  <carro></carro> 
 
   
   
@@ -62,6 +66,8 @@
   // import elemento from './components/elemento.vue'
   import Tareas from './components/tareas.vue'
   import Contador from './components/contador.vue'
+  import Productos from './components/Productos.vue'
+  import Carro from './components/Carro.vue'
 
   // usando mapState
   import {mapState} from 'vuex'
@@ -70,7 +76,7 @@
   // components: { persona },
   // components: { Tareas },
 export default {
-  components: { Contador },
+  components: { Contador, Productos, Carro },
 
   // computed: {
   //   nombre(){
