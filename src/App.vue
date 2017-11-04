@@ -2,12 +2,12 @@
 
 <template>
   <div>
-    <h1>shadow Dom</h1>
-    <input type="range">
+   <!--  <h1>shadow Dom</h1>
+    <input type="range"> -->
     <!-- <persona></persona> -->
 
     <!-- <elemento tipo="footer">Hola Mundo</elemento> -->
-    <tareas></tareas>
+    <!-- <tareas></tareas>
 
     <h1>menu principal</h1>
     <ul>
@@ -18,12 +18,23 @@
       <li><a href="">enlace</a> </li>
       <li><a href="">enlace</a> </li>
       <li><a href="">enlace</a> </li>
-    </ul>
+    </ul> -->
 
+    <!-- <h1 :class="[$style.rojo]" >Hola css Modules</h1>
+    <h1 :class="{[$style.subrayado] : subrayo}" >Hola css Modules</h1> -->
 
+  <!-- Antes de Vuex -->
+  <!-- <contador :cantidad="cantidad"
+            @aumentar="cantidad++"
+            @reducir="cantidad--">
+              
+  </contador>  -->
 
-    <h1 :class="[$style.rojo]" >Hola css Modules</h1>
-    <h1 :class="{[$style.subrayado] : subrayo}" >Hola css Modules</h1>
+  <!-- Despues de vuex -->
+  <contador>
+              
+  </contador> 
+  
   </div>
 </template>
 
@@ -31,14 +42,20 @@
   // import persona from './components/persona.vue'
   // import elemento from './components/elemento.vue'
   import Tareas from './components/tareas.vue'
+  import Contador from './components/contador.vue'
+  
   // components: { elemento },
   // components: { persona },
+  // components: { Tareas },
 export default {
-  components: { Tareas },
+  components: { Contador },
   data(){
     return {
-      subrayo: false
-    }
+      // cantidad: 0,
+      // subrayo: false,
+
+    },
+    
   }
   
 }
