@@ -18,7 +18,21 @@ export const store = new Vuex.Store({
 	state: {
 		nombre: 'joel suarez',
 		apellidos: 'suarez',
-		profesion: 'Developer'
+		profesion: 'Developer',
+		tareas: [
+		{nombre: 'hacer la cama', completado: false},
+		{nombre: 'hacer la cama', completado: true},
+		{nombre: 'hacer la cama', completado: false},
+		{nombre: 'hacer la cama', completado: false},
+		{nombre: 'hacer la cama', completado: true},
+
+		]
+	},
+	getters: {
+		tareasCompletadas: (state) => {
+			return state.tareas.filter((tarea) => tarea.completado).length
+		}
 	}
+
 })
 

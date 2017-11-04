@@ -35,8 +35,16 @@
               
   </contador>  -->
 
-  <h1> Uso de mamState</h1>
-  <h1>Hola me llamo {{nombre}} {{apellidos}} y me dedico a {{profesion}} </h1>
+  <!-- Uso de Map State  -->
+  <!-- <h1> Uso de mamState</h1>
+  <h1>Hola me llamo {{nombre}} {{apellidos}} y me dedico a {{profesion}} </h1> -->
+
+  <!-- Vuex Getters -->
+  <h1>Tareas con Vuex</h1>
+  <tareas></tareas>
+
+
+
   
   
   </div>
@@ -53,9 +61,9 @@
   
   // components: { elemento },
   // components: { persona },
-  // components: { Tareas },
+  // components: { Contador },
 export default {
-  components: { Contador },
+  components: { Tareas },
   // computed: {
   //   nombre(){
   //     return this.$store.state.nombre
@@ -65,7 +73,7 @@ export default {
   //   nombre: (state) =>  state.nombre, 
   //   apellidos: (state) =>  state.apellidos
   // })
-  computed: mapState(['nombre', 'apellidos', 'profesion'])
+  // computed: mapState(['nombre', 'apellidos', 'profesion'])
 
   // data(){
   //   return {
